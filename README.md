@@ -16,27 +16,52 @@ Input: nums1 = [1,2,3,0,0,0], m = 3
 Output: [1,2,2,3,5,6]
 ```
 
-### 🔥 Approach: Two-Pointer In-Place Merging  
+---
 
-#### 📌 Step 1: Utilize Two Pointers  
-- Start **from the end** of both `nums1` and `nums2`:  
-  - `i = m - 1` (last valid element in `nums1`)  
-  - `j = n - 1` (last element in `nums2`)  
-  - `k = m + n - 1` (last index of `nums1`, where merging happens)  
+### 🚀 Question 2: Remove Element  
 
-- Compare elements **from both arrays** and place the **larger** one at the last available position in `nums1`.  
-- This ensures **efficient merging** without needing extra memory.  
+#### 📝 Problem Statement:  
+You are given an **integer array `nums`** and an integer `val`. Your task is to **remove all occurrences** of `val` **in-place** from `nums`.  
 
-#### 📌 Step 2: Handling Remaining Elements  
-- If `nums2` still has leftover elements **(j >= 0)**, copy them directly into `nums1`.  
-- If `nums1` already has all elements placed, the merge is complete.  
+🔹 The order of elements **may change**, but the first `k` elements of `nums` must contain only elements **not equal** to `val`.  
+🔹 Return `k` – the number of remaining valid elements in `nums`.  
+🔹 The extra elements beyond `k` are **not important**, and their values do not need to be preserved.  
 
-#### ⚡ Why This Approach?  
-✔ **In-place merging** → No extra space needed, modifying `nums1` directly.  
-✔ **O(m + n) complexity** → Linear time efficiency using two-pointer technique.  
-✔ **Optimized merging** → Works smoothly on pre-sorted arrays.  
-
-#### 🎯 Interview Strategy  
-Mastering this approach **demonstrates practical array manipulation skills**, efficient **sorting techniques**, and your ability to **optimize solutions without extra memory overhead**—all essential for **FAANG-level coding interviews!** 🚀  
+#### ✅ Example:
+```java
+Input: nums = [3,2,2,3], val = 3  
+Output: 2, nums = [2,2,_,_]
+```
 
 ---
+
+### 🚀 Question 3: Remove Duplicates from Sorted Array  
+
+#### 📝 Problem Statement:  
+You are given a **sorted integer array `nums`** (non-decreasing order). Your task is to **remove the duplicates in-place** so that **each unique element appears only once**, while maintaining the **relative order of the elements**.  
+
+🔹 The result should be stored in the first `k` elements of `nums`.  
+🔹 The extra elements beyond `k` **do not matter** and can be ignored.  
+🔹 Return `k`, which represents the number of unique elements.  
+
+#### ✅ Example 1:
+```java
+Input: nums = [1,1,2]  
+Output: 2, nums = [1,2,_]
+```
+----
+
+### 🚀 Question 4: Remove Duplicates from Sorted Array II  
+
+#### 📝 Problem Statement:  
+You are given a **sorted integer array `nums`** (non-decreasing order). Your task is to **modify the array in-place** so that:  
+🔹 Each unique element appears **at most twice**  
+🔹 The relative order of the elements is **maintained**  
+🔹 The result should be stored in the **first k elements of `nums`**  
+🔹 The remaining elements **do not matter**  
+
+#### ✅ Example 1:
+```java
+Input: nums = [1,1,1,2,2,3]  
+Output: 5, nums = [1,1,2,2,3,_]
+```
