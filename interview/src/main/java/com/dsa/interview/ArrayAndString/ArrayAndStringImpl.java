@@ -93,4 +93,97 @@ public class ArrayAndStringImpl {
 
         return pointer; // Return the new length of the array
     }
+
+    public int majorityElement(int[] majorityElementNums) {
+        
+        int threshold = majorityElementNums.length / 2;
+
+        //Step 1: Bayer-Moore Voting Algorithm
+        int candidate = majorityElementNums[0];
+        int count = 0;
+
+        for( int num: majorityElementNums ) {
+            if( count == 0 ) {
+                candidate = num; // If count is 0, set the current number as candidate
+            }
+            count += ( num == candidate ) ? 1 : -1; // Increment count if the number is the candidate, otherwise decrement it
+        }
+
+        //Step 2: Verify the candidate
+        count = 0;
+        for(int num: majorityElementNums) {
+            if(num == candidate) {
+                count += 1; // Count occurrences of the candidate
+            }
+        }
+
+        //Step 3: Check if the candidate is indeed the majority element
+        if(count > threshold) {
+            return candidate; // If the count is greater than the threshold, return the candidate
+        } else {
+            return -1; // If no majority element found, return -1
+        }
+
+    }
+
+    public void rotate(int[] rotateArrayNums, int k) {
+
+        //Step 1: Initialize the length of the array
+        int n = rotateArrayNums.length;
+            k = k % n; // Handle cases where k is greater than n
+        
+        //Step 2: Reverse
+        reverse(rotateArrayNums, 0, n - 1);
+        reverse(rotateArrayNums, 0, k - 1);
+        reverse(rotateArrayNums, k, n - 1);
+        
+    }
+    private void reverse( int[] nums, int start, int end){
+        while(start <= end){
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+    public int maxProfit(int[] stockPrices) {
+
+        //Step 1: Initialize variables for minimum price and maximum profit
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        //Step 2: Initerate through the array
+        for (int price: stockPrices) {
+
+            //Step 3: Find the minimum
+            if(price < minPrice){
+                minPrice = price;
+            }
+
+            else if (price - minPrice > maxProfit){
+                maxProfit = price - minPrice;
+            }
+        }
+
+        return maxProfit;
+        
+    }
+
+    public int maxProfitII(int[] stockPricesII) {
+        
+        //Step 1: Initialize the max profit to 0
+        int maxProfit = 0;
+
+        //Step 2: Initerate through the array
+        for(int i = 1; i < stockPricesII.length; i++){
+
+            if(stockPricesII[i] > stockPricesII[i - 1]){
+                maxProfit += stockPricesII[i] - stockPricesII[i - 1];
+            }
+        }
+
+        return maxProfit;
+    }
 }

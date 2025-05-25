@@ -72,6 +72,59 @@ public class ArrayAndString {
         //-----------------------------------------------------------------------------
 
 
+        /* Question 5: Majority Element:
+            Input: nums = [3, 2, 3]
+            Output: 3
+        */
+
+        int[] majorityElementNums = {3, 2, 3};
+        int majorityElement = array.majorityElement(majorityElementNums);
+        System.out.println("Question 5: Majority Element");
+        System.out.println("Majority Element: " + majorityElement);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /* Question 6: Rotate Array:
+            Input: nums = [1,2,3,4,5,6,7], k = 3
+            Output: [5,6,7,1,2,3,4]
+        */
+
+        int[] rotateArrayNums = {1, 2, 3, 4, 5, 6, 7};
+        int k = 3;
+        array.rotate(rotateArrayNums, k);
+        System.out.println("Question 6: Rotate Array");
+        System.out.print("After rotation: ");
+        printStatement(rotateArrayNums, rotateArrayNums.length);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /* Question 7: Best Time to Buy and Sell Stock
+            Input: prices = [7,1,5,3,6,4]
+            Output: 5
+        */
+
+        int[] stockPrices = {7, 1, 5, 3, 6, 4};
+        int maxProfit = array.maxProfit(stockPrices);
+        System.out.println("Question 7: Best Time to Buy and Sell Stock");
+        System.out.println("Maximum Profit: " + maxProfit);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /* Question 8: Best Time to Buy and Sell Stock II
+            Input: prices = [7,1,5,3,6,4]
+            Output: 7
+        */
+
+        int[] stockPricesII = {7, 1, 5, 3, 6, 4};
+        int maxProfitII = array.maxProfitII(stockPricesII);
+        System.out.println("Question 8: Best Time to Buy and Sell Stock II");
+        System.out.println("Maximum Profit: " + maxProfitII);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+        
+
+
+
 
 
         
