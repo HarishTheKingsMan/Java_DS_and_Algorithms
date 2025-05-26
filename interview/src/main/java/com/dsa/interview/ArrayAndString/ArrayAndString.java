@@ -1,5 +1,7 @@
 package com.dsa.interview.ArrayAndString;
 
+import com.dsa.interview.ArrayAndString.ArrayAndStringImpl.RandomizedSet;
+
 public class ArrayAndString {
     private static void printStatement(int[] nums, int length) {
         for (int i = 0; i < length; i++) {
@@ -121,6 +123,121 @@ public class ArrayAndString {
         System.out.println("Maximum Profit: " + maxProfitII);
         System.out.println("------------------------------------------------------------------------------");
         //-----------------------------------------------------------------------------
+
+        /* Question 9: Jump Game
+            Input: jumpNums = [2, 3, 1, 1, 4]
+            Output: true
+        */
+
+        int[] jumpNums = {7, 1, 5, 3, 6, 4};
+        Boolean jumpPossibility = array.jumpPossibility(jumpNums);
+        System.out.println("Question 9: Jump Game");
+        System.out.println("is Jump Possible: " + jumpPossibility);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /* Question 10: Jump Game II
+            Input: jumpNums = [2, 3, 1, 1, 4]
+            Output: 2
+        */
+
+        int[] jumpNumsII = {7, 1, 5, 3, 6, 4};
+        int jumpPossibilityII = array.jumpPossibilityII(jumpNumsII);
+        System.out.println("Question 10: Jump Game II");
+        System.out.println("min Jump Required: " + jumpPossibilityII);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /*
+         * Question 11: H - index
+         * input: citations = [3,0,6,1,5]
+         * Output : 3
+         */
+
+        int[] citations = {3, 0, 6, 1, 5};
+        int cited = array.maxCitations(citations);
+        System.out.println("Question 11: H - index");
+        System.out.println("paper cited atleast that num of citations : " + cited);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /*
+         * Question 12: Insert Delete GetRandom O(1)
+         * Input: ["RandomizedSet", "insert", "remove", "getRandom", "insert", "getRandom"]
+         *       Output: [null, true, true, 2, false, 2] 
+         */
+
+        RandomizedSet randomizedSet = array.new RandomizedSet();
+        System.out.println("Question 12: Insert Delete GetRandom O(1)");
+        System.out.println("Insert 1: " + randomizedSet.insert(1)); // true
+        System.out.println("Insert 2: " + randomizedSet.insert(2)); // true
+        System.out.println("Insert 3: " + randomizedSet.insert(3)); // true
+        System.out.println("Get Random: " + randomizedSet.getRandom()); // Randomly returns 1, 2, or 3
+        System.out.println("Remove 2: " + randomizedSet.delete(2)); // true
+        System.out.println("Get Random: " + randomizedSet.getRandom()); // Randomly returns 1 or 3
+        System.out.println("Insert 2: " + randomizedSet.insert(2)); // true
+        System.out.println("Get Random: " + randomizedSet.getRandom()); // Randomly returns 1, 2, or 3
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /*
+         * Question 13: Product of Array Except Self ( No Division Technique)
+         * Input : productNums = [1, 2, 3, 4]
+         * Output : [24, 12, 8, 6]
+         */
+
+        int[] productNums = {1, 2, 3, 4};
+        int[] productResult = array.productWithoutSelf(productNums);
+        System.out.println("Question 13: Product of Array Except Self: ");
+        System.out.println("Product Array without self : ");
+        printStatement(productResult, productResult.length);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /*
+         * Question 14: Gas Station - Circular
+         * input : gas[] = [1, 2, 3, 4, 5]; cost[] = [3, 4, 5, 1, 2]
+         * Output : 3
+         */
+
+        int[] gas = {1, 2, 3, 4, 5};
+        int[] cost = {3, 4, 5, 1, 2};
+        int startingPoint = array.findStation(gas, cost);
+        System.out.println("Question 14: Gas Station - Circular :");
+        System.out.println("Starting point where we can start journey: " + startingPoint);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /*
+         * Question 15: Candy Child : Distributing a candy among all children and every children should get atleast 1 candy
+         * Input : ratings = [1, 2, 2]
+         * Output : [1, 2, 1]
+         */
+        int[] ratings = {1, 2, 2};
+        int minCandy = array.minCandy(ratings);
+        System.out.println("Question 15: Candy for Child: ");
+        System.out.println("Minimum Candy for Children : " + minCandy);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /*
+         * Question 16: Trapping Rain : 
+         * Input : height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+         * Output : 6
+         */
+
+        int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        int totalCapturedWater = array.trappingWater(height);
+        System.out.println("Question 16 : Trapping Rain");
+        System.out.println("Total Trapped Water : " + totalCapturedWater);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+
+
+        
+
+
         
 
 

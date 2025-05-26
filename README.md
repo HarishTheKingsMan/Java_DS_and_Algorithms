@@ -131,3 +131,141 @@ Output: 7
 ```
 
 ----
+
+### 🚀 Question 9: Jump Game  
+
+#### 📝 Problem Statement:  
+You are given an **integer array `nums`**, where `nums[i]` represents the **maximum jump length** at index `i`.  
+
+🔹 Starting at index `0`, determine if you can **reach the last index**.  
+🔹 You can move **forward** within the allowed jump limit.  
+🔹 If at any point, you are stuck with no valid jumps left, return `false`.  
+
+#### ✅ Example 1:
+```java
+Input: nums = [2,3,1,1,4]  
+Output: true
+```
+
+----
+
+### 🚀 Question 10: Jump Game II  
+
+#### 📝 Problem Statement:  
+You are given a **0-indexed array of integers `nums`**, where `nums[i]` represents the **maximum length of a forward jump** from index `i`.  
+
+🔹 Starting at index `0`, determine the **minimum number of jumps** required to reach the last index.  
+🔹 You can always reach the last index (no unreachable cases).  
+
+#### ✅ Example 1:
+```java
+Input: nums = [2,3,1,1,4]  
+Output: 2
+```
+
+----
+
+### 🚀 Question 11: H-Index  
+
+#### 📝 Problem Statement:  
+You are given an **integer array `citations`**, where `citations[i]` represents the number of citations a researcher received for their `i-th` paper.  
+
+🔹 The **h-index** is defined as the maximum value of `h` such that the researcher has published at least `h` papers, each cited **at least `h` times**.  
+🔹 The goal is to **return the researcher's h-index** based on their citation data.  
+
+#### ✅ Example 1:
+```java
+Input: citations = [3,0,6,1,5]  
+Output: 3
+```
+
+----
+
+### 🚀 Question 12: Insert Delete GetRandom O(1)  
+
+#### 📝 Problem Statement:  
+Implement the `RandomizedSet` class with the following operations:  
+
+🔹 **insert(int val)** → Inserts `val` into the set if **not present**, returns `true` if added, `false` otherwise.  
+🔹 **remove(int val)** → Removes `val` from the set if **present**, returns `true` if removed, `false` otherwise.  
+🔹 **getRandom()** → Returns a **random element** from the set (each element must have equal probability).  
+
+Each function must run in **average O(1) time complexity**.
+
+#### ✅ Example:
+```java
+Input:
+["RandomizedSet", "insert", "remove", "insert", "getRandom", "remove", "insert", "getRandom"]
+[[], [1], [2], [2], [], [1], [2], []]
+
+Output:
+[null, true, false, true, 2, true, false, 2]
+```
+
+----
+
+### 🚀 Question 13: Product of Array Except Self  
+
+#### 📝 Problem Statement:  
+You are given an **integer array `nums`**, and you must return an array `answer` where:  
+🔹 `answer[i]` is the **product of all elements** except `nums[i]`.  
+🔹 You **cannot use the division operation** (`/`).  
+🔹 The algorithm must run in **O(n) time complexity**.  
+
+#### ✅ Example 1:
+```java
+Input: nums = [1,2,3,4]  
+Output: [24,12,8,6]
+```
+
+----
+
+### 🚀 Question 14: Gas Station  
+
+#### 📝 Problem Statement:  
+There are **`n` gas stations** along a circular route, where `gas[i]` represents the amount of fuel available at the `i-th` station.  
+Each station requires `cost[i]` units of fuel to travel to the next station.  
+
+🔹 Your car starts **empty**, and you must find the **starting station index** that allows completing one full circuit.  
+🔹 If there’s **no valid solution**, return `-1`.  
+🔹 The solution is **guaranteed to be unique** if it exists.  
+
+#### ✅ Example:
+```java
+Input: gas = [1,2,3,4,5], cost = [3,4,5,1,2]  
+Output: 3
+```
+
+----
+
+### 🚀 Question 15: Candy Distribution  
+
+#### 📝 Problem Statement:  
+There are `n` children standing in a line, each assigned a **rating** given in the array `ratings`. You must distribute candies to the children while ensuring:  
+1️⃣ Each child must receive **at least one candy**.  
+2️⃣ Children with a **higher rating** must receive **more candies than their neighbors**.  
+🔹 The goal is to **return the minimum number of candies** required.  
+
+#### ✅ Example:
+```java
+Input: ratings = [1,0,2]  
+Output: 5
+
+Input: ratings = [1, 2, 2]
+Output: 4
+```
+----
+
+### 🚀 Question 16: Trapping Rain Water  
+
+#### 📝 Problem Statement:  
+You are given a list of **non-negative integers**, `height`, representing an elevation map. The width of each bar is `1`. Your task is to determine the **total units of rainwater that can be trapped** after raining.  
+![alt text](image.png)
+
+#### ✅ Example 1:
+```java
+Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]  
+Output: 6
+```
+
+----
