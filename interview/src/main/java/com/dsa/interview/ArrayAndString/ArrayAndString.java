@@ -1,5 +1,7 @@
 package com.dsa.interview.ArrayAndString;
 
+import java.util.List;
+
 import com.dsa.interview.ArrayAndString.ArrayAndStringImpl.RandomizedSet;
 
 public class ArrayAndString {
@@ -232,6 +234,114 @@ public class ArrayAndString {
         System.out.println("Total Trapped Water : " + totalCapturedWater);
         System.out.println("------------------------------------------------------------------------------");
         //-----------------------------------------------------------------------------
+
+        /*
+         * Question 17: Roman to Integer
+         * Input romanInput =  "LVIII"
+         * Output : 58
+         */
+
+        String romanInput = "LVIII";
+        int numberOut = array.romanInput(romanInput);
+        System.out.println("Question 17: Roman to Integer : ");
+        System.out.println("Converted roman number: " + numberOut);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /*
+         * Question 18: Integer to Roman
+         * Input : numberInput = 3749
+         * Output : MMMDCCXLIX
+         */
+
+        int numberInput = 3749;
+        String romanOutput = array.numberInput(numberInput);
+        System.out.println("Question 18: Integer to Roman");
+        System.out.println("Converted Roman " + romanOutput);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /**
+         * Question 19: Length of last word
+         * Input lastWord = "Hello World   "
+         * Output: 5
+         */
+
+        String lastWord = "Hello World  ";
+        int lastWordLength = array.lastWordLength(lastWord);
+        System.out.println("Question 19: Length of Last Word: ");
+        System.out.println("Length of Last Word: " + lastWordLength);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /**
+         * Question 20: Longest Common Prefix:
+         * Input : commonPrefix = ["flower", "flow", "flight"]
+         * Output: "fl"
+         */
+
+        String[] commonPrefix = {"flower", "flow", "flight"};
+        String longestCommonPrefix = array.LongestCommonPrefix(commonPrefix);
+        System.out.println("Question 20: Longest Commmon Prefix: ");
+        System.out.println("Longest Commmon Prefix : " + longestCommonPrefix);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /*
+         * Question 21: Reverse words in a string
+         * Input wordString = "the sky is blue"
+         * Output : "blue is sky the"
+         */
+
+        String wordString = "the sky is blue";
+        String wordResult = array.reverseString(wordString);
+        System.out.println("Question 21: Reverse words in a string");
+        System.out.println("Revered String :" + wordResult);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /*
+         * Question 22: ZigZag Conversion
+         * Input zigString = "PAYPALISHIRING"
+         * Output : "PAHNAPLSIIGYIR"
+         */
+
+         String zigString = "PAYPALISHIRING";
+         int numOfRows = 3;
+         String zigResult = array.ZigZagTraversal(zigString, numOfRows);
+         System.out.println("Question 22: Zig Zag Traversal: ");
+         System.out.println("zig Result : " + zigResult);
+         System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /*
+         * Question 23: Find the First Occurence
+         * Input firsOccurenceString = "sadbutsad"; findThis = "sad"
+         * Output : 0
+         */
+
+        String firstOccurenceString = "esadbutsad";
+        String findThis ="sad";
+        int indexOfFirst = array.findFirst(firstOccurenceString, findThis);
+        System.out.println("Question 23: Find the First Occurence");
+        System.out.println("First Occurence: " + indexOfFirst);
+        System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
+        /*
+         * Question 24: Text Justification
+         * Input words[] = ["This", "is", "an", "example", "of", "text", "justification."]
+         * Output : ["This  is  an", "example  of  text", "justification.   "]
+         */
+
+         String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
+         int maxWidth = 16;
+         List<String> result = array.textJustification(words, maxWidth);
+         System.out.println("Question 24 : Text Justification : ");
+         System.out.println("Text Justfied Result : " + result); 
+         System.out.println("------------------------------------------------------------------------------");
+        //-----------------------------------------------------------------------------
+
 
 
 

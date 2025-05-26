@@ -269,3 +269,156 @@ Output: 6
 ```
 
 ----
+### 🚀 Question 17: Roman to Integer  
+
+#### 📝 Problem Statement:  
+Given a **Roman numeral string `s`**, convert it to an **integer**.  
+
+✔ Roman numerals follow **descending order**, except for subtractive cases like:  
+  - `IV` = `4` (`I` before `V`)
+  - `IX` = `9` (`I` before `X`)
+  - `XL` = `40`, `XC` = `90`
+  - `CD` = `400`, `CM` = `900`
+
+🔹 The goal is to parse the string and sum up values **while handling subtractive cases properly**.  
+
+#### ✅ Example 1:
+```java
+Input: s = "III"  
+Output: 3
+```
+
+----
+
+### 🚀 Question 18: Integer to Roman  
+
+#### 📝 Problem Statement:  
+You are given an **integer `num`**, and you must convert it to **Roman numerals** using proper rules:
+
+✔ Roman numerals are built from **largest to smallest values**  
+✔ **Subtractive notation is used** for specific numbers:  
+  - `4` → `IV`, `9` → `IX`  
+  - `40` → `XL`, `90` → `XC`  
+  - `400` → `CD`, `900` → `CM`  
+
+---
+
+### ✅ Example
+```java
+Input: num = 3749  
+Output: "MMMDCCXLIX"
+```
+
+----
+
+### 🚀 Question 19: Length of Last Word  
+
+#### 📝 Problem Statement:  
+Given a string `s` containing words separated by spaces, **return the length of the last word** (a word is a maximal sequence of non-space characters).  
+
+#### ✅ Example:
+```java
+Input: s = "Hello World   "  
+Output: 5
+```
+
+----
+
+### 🚀 Question 20: Longest Common Prefix  
+
+#### 📝 Problem Statement:  
+Given an array of strings `strs`, return the **longest common prefix** among them. If no common prefix exists, return an **empty string** `""`.
+
+---
+
+#### ✅ Example:
+```java
+Input: strs = ["flower", "flow", "flight"]  
+Output: "fl"
+```
+
+----
+
+### 🚀 Question 21: Reverse Words in a String  
+
+#### 📝 Problem Statement:  
+Given an input string `s`, reverse the order of the words while ensuring:  
+✔ Words are separated by a **single space**.  
+✔ Leading and trailing spaces are **removed**.  
+✔ Multiple spaces between words are **collapsed** into one.  
+
+---
+
+#### ✅ Example:
+```java
+Input: s = "the sky is blue"  
+Output: "blue is sky the"
+```
+
+----
+
+### 🚀 Question 22: Zigzag Conversion  
+
+#### 📝 Problem Statement:  
+Given a string `s` and an integer `numRows`, rearrange the characters into a **zigzag pattern** over `numRows`. Finally, read the characters **row by row** to form the output.
+
+---
+
+#### ✅ Example:
+
+```java
+
+Input: s = "PAYPALISHIRING", numRows = 3  
+P   A   H   N
+A P L S I I G
+Y   I   R
+Output: "PAHNAPLSIIGYIR"
+```
+
+----
+
+### 🚀 Question 23: Find the Index of the First Occurrence in a String
+
+#### 📝 Problem Statement:  
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack. If needle is not present, return -1.
+
+#### ✅ Example:
+
+```java
+
+Input: haystack = "sadbutsad", needle = "sad"  
+Output: 0
+
+```
+
+----
+
+### 🚀 Question 24: Text Justification  
+
+#### 📝 Problem Statement:  
+Given an array of strings `words` and a width `maxWidth`, format the text such that:  
+✔ Each line has exactly `maxWidth` characters and is fully **left and right justified**.  
+✔ Words are packed **greedily**, meaning each line gets as many words as possible.  
+✔ **Extra spaces** between words are distributed **evenly** across the line.  
+✔ If spaces cannot be evenly distributed, **leftmost words get more spaces** than the rightmost words.  
+✔ The **last line** should be **left-justified**, with no extra space between words.  
+
+🔹 **Constraints:**  
+- A word is defined as a sequence of **non-space characters**.  
+- Each word’s length is guaranteed to be **greater than 0 and not exceed `maxWidth`**.  
+- The input array contains **at least one word**.  
+
+---
+
+#### ✅ Example:
+```java
+Input: words = ["This", "is", "an", "example", "of", "text", "justification."], maxWidth = 16  
+Output:
+[
+   "This    is    an",
+   "example  of text",
+   "justification.  "
+]
+```
+
+----
