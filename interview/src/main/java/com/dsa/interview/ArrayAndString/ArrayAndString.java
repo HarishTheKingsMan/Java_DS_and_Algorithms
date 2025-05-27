@@ -26,7 +26,7 @@ public class ArrayAndString {
         array.merge(mergenums1, m, mergenums2, n);
         System.out.println("Question 1: Merge Sorted Array");
         System.out.print("After merging: ");
-        printStatement(mergenums1, mergenums1.length -1);
+        printStatement(mergenums1, mergenums1.length);
         System.out.println("Merged array: " + mergenums1.length + " elements");
         System.out.println("------------------------------------------------------------------------------");
 
@@ -143,7 +143,7 @@ public class ArrayAndString {
             Output: 2
         */
 
-        int[] jumpNumsII = {7, 1, 5, 3, 6, 4};
+        int[] jumpNumsII = {2, 3, 1, 1, 4};
         int jumpPossibilityII = array.jumpPossibilityII(jumpNumsII);
         System.out.println("Question 10: Jump Game II");
         System.out.println("min Jump Required: " + jumpPossibilityII);

@@ -222,13 +222,13 @@ public class ArrayAndStringImpl {
         
         //Step 1: Initialize the element for farthest and current
         int farthest = 0;
-        int n = jumpNums.length - 1;
+        int n = jumpNums.length;
 
         int jumps = 0;
         int currentReach = 0;
 
         //Step 2: Iterate through the array
-        for(int i = 0; i < n - 1; i++) { /// Untill only last second
+        for(int i = 0; i < n; i++) { /// Untill only last second
 
             farthest = Math.max(farthest, i + jumpNums[i]); /// Collect the farthest untill now
 
@@ -466,7 +466,7 @@ public class ArrayAndStringImpl {
         int prevValue = 0;
         int totalValue = 0;
         for ( int i = romanInput.length() -1; i >= 0; i-- ){
-
+            
             int currentValue = map.get(romanInput.charAt(i));
             if( currentValue < prevValue){
                 totalValue -= currentValue;
