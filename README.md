@@ -422,3 +422,96 @@ Output:
 ```
 
 ----
+## 📌 Two Pointers 
+
+### 🚀 Question 25: Valid Palindrome  
+
+#### 📝 Problem Statement:  
+A string `s` is considered a **palindrome** if, after:
+1. Converting all **uppercase letters** into **lowercase**.
+2. **Removing all non-alphanumeric** characters (punctuation, spaces, etc.).
+
+It reads the **same forward and backward**.
+
+Given a string `s`, return **true** if it is a palindrome, or **false** otherwise.
+
+#### ✅ Example:
+```java
+Input: s = "A man, a plan, a canal: Panama"  
+Output: true
+```
+
+----
+
+### 🚀 Question 26:  Is Subsequence  
+
+#### 📝 Problem Statement:  
+Given two strings `s` and `t`, return **true** if `s` is a **subsequence** of `t`, or **false** otherwise.  
+
+🔹 **Definition:**  
+A subsequence of a string is formed by deleting some (or none) of the characters **without changing the relative order** of the remaining characters.  
+Example: `"ace"` is a subsequence of `"abcde"`, but `"aec"` is **not**.  
+
+---
+
+#### ✅ Example:
+```java
+Input: s = "abc", t = "ahbgdc"
+Output: true
+```
+
+----
+
+### 🚀 Question 27: Two Sum II - Input Array Is Sorted  
+
+#### 📝 Problem Statement:  
+Given a **1-indexed** sorted array `numbers` in **non-decreasing order**, find **two numbers** that sum up to a given `target`.  
+Let these two numbers be `numbers[index1]` and `numbers[index2]`, where `1 <= index1 < index2 <= numbers.length`.  
+
+✔ **Return the indices** of the two numbers, `index1` and `index2`, as `[index1, index2]`.  
+✔ **You may not use the same element twice**.  
+✔ **You must solve this using constant extra space (`O(1)`)**.  
+✔ **There is exactly one solution** for each test case.  
+
+#### ✅ Example:
+```java
+Input: numbers = [2,7,11,15], target = 9  
+Output: [1,2]
+```
+
+----
+
+### 🚀 Question 28: Container With Most Water  
+
+#### 📝 Problem Statement:  
+You are given an **integer array** `height` of length `n`.  
+There are `n` vertical lines drawn such that the **two endpoints** of the `i-th` line are **(i, 0)** and **(i, height[i])**.  
+
+Find **two lines** that together with the **x-axis** form a container, such that the container **holds the maximum amount of water**.  
+
+🔹 **Rules:**  
+✔ You **must maximize** the stored water.  
+✔ You **may not slant** the container.  
+![alt text](image-1.png)
+#### ✅ Example:
+```java
+Input: height = [1,8,6,2,5,4,8,3,7]  
+Output: 49
+```
+----
+
+### 🚀 Question 29: 3Sum  
+
+#### 📝 Problem Statement:  
+Given an **integer array** `nums`, return **all unique triplets** `[nums[i], nums[j], nums[k]]` that satisfy:  
+✔ `i != j`, `i != k`, and `j != k`.  
+✔ `nums[i] + nums[j] + nums[k] == 0`.  
+✔ **No duplicate triplets** should exist in the output.  
+
+#### ✅ Example:
+```java
+Input: nums = [-1,0,1,2,-1,-4]  
+Output: [[-1,-1,2],[-1,0,1]]
+```
+
+----
