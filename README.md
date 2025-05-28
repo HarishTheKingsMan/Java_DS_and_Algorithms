@@ -515,3 +515,66 @@ Output: [[-1,-1,2],[-1,0,1]]
 ```
 
 ----
+
+### 🚀 Question 30: Minimum Size Subarray Sum  
+
+#### 📝 Problem Statement:  
+Given an **array** of **positive integers** `nums` and a **positive integer** `target`,  
+return the **minimal length** of a contiguous subarray whose **sum is greater than or equal to `target`**.  
+If there is **no such subarray**, return `0` instead.  
+
+#### ✅ Example:
+```java
+Input: target = 7, nums = [2,3,1,2,4,3]
+Output: 2
+```
+
+----
+
+### 🚀 Question 31: Longest Substring Without Repeating Characters  
+
+#### 📝 Problem Statement:  
+Given a string `s`, find the **length** of the **longest substring** that **contains no repeating characters**.  
+
+#### ✅ Example:
+```java
+Input: s = "abcabcbb"  
+Output: 3
+```
+
+----
+
+### 🚀 Question 32: Substring with Concatenation of All Words  
+
+#### 📝 Problem Statement:  
+You are given a **string** `s` and an **array of strings** `words`.  
+All strings in `words` have the **same length**.  
+
+✔ A **concatenated string** is a string that contains **all the strings** from any **permutation** of `words`, concatenated.  
+✔ Return **an array of the starting indices** of all concatenated substrings in `s`.  
+✔ The answer can be **in any order**.  
+
+#### ✅ Example:
+```java
+Input: s = "barfoothefoobarman", words = ["foo","bar"]
+Output: [0,9]
+```
+
+----
+
+### 🚀 Question 33: Minimum Window Substring  
+
+#### 📝 Problem Statement:  
+Given two strings `s` and `t` of lengths `m` and `n` respectively,  
+return the **minimum window substring** of `s` such that every character in `t` (**including duplicates**) is included in the window.  
+
+✔ If **no valid substring exists**, return `""`.  
+✔ The test cases guarantee that the answer is **unique**.  
+
+#### ✅ Example:
+```java
+Input: s = "ADOBECODEBANC", t = "ABC"
+Output: "BANC"
+```
+
+----
