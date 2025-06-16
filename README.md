@@ -578,3 +578,308 @@ Output: "BANC"
 ```
 
 ----
+
+### 🚀 Question 34: Valid Sudoku  
+
+#### 📝 Problem Statement:  
+Given a **9 × 9 Sudoku board**, determine whether it is **valid** based on the following rules:  
+1️⃣ **Each row** must contain the digits **1-9** without repetition.  
+2️⃣ **Each column** must contain the digits **1-9** without repetition.  
+3️⃣ **Each 3 × 3 sub-box** must contain the digits **1-9** without repetition.  
+
+🔹 **Note:**  
+- A **partially filled board** may be valid but **not necessarily solvable**.  
+- **Only the filled cells** need to be validated.  
+![alt text](image-2.png)
+#### ✅ Example:
+```java
+Input: board =
+[
+  ["5","3",".",".","7",".",".",".","."],
+  ["6",".",".","1","9","5",".",".","."],
+  [".","9","8",".",".",".",".","6","."],
+  ["8",".",".",".","6",".",".",".","3"],
+  ["4",".",".","8",".","3",".",".","1"],
+  ["7",".",".",".","2",".",".",".","6"],
+  [".","6",".",".",".",".","2","8","."],
+  [".",".",".","4","1","9",".",".","5"],
+  [".",".",".",".","8",".",".","7","9"]
+]
+Output: true
+```
+
+----
+
+### 🚀 Question 35: Spiral Matrix  
+
+#### 📝 Problem Statement:  
+Given an `m × n` matrix, return **all elements** in **spiral order**, starting from the **top-left** and moving **clockwise**.  
+
+#### ✅ Example:
+![alt text](image-3.png)
+```java
+Input: matrix = [[1,2,3],  
+                 [4,5,6],  
+                 [7,8,9]]  
+Output: [1,2,3,6,9,8,7,4,5]
+```
+
+---
+
+### 🚀 Question 36: Rotate Image  
+
+#### 📝 Problem Statement:  
+You are given an **n × n** 2D matrix representing an image.  
+Rotate the image **90 degrees clockwise** **in-place** (without using another matrix).  
+
+✔ You **must modify the input matrix directly**.  
+✔ **DO NOT** allocate another 2D matrix for rotation.  
+
+#### ✅ Example:
+![alt text](image-4.png)
+```java
+Input: matrix = [[1,2,3],  
+                 [4,5,6],  
+                 [7,8,9]]  
+Output: [[7,4,1],  
+         [8,5,2],  
+         [9,6,3]]
+```
+
+----
+
+### 🚀 Question 37: Set Matrix Zeroes  
+
+#### 📝 Problem Statement:  
+Given an `m × n` integer matrix `matrix`, **if an element is `0`**, set its **entire row and column** to `0`s.  
+✔ **Must be done in-place** (modifying the matrix directly without using an extra copy).  
+
+![alt text](image-5.png)
+
+#### ✅ Example:
+```java
+Input: matrix = [[1,1,1],  
+                 [1,0,1],  
+                 [1,1,1]]  
+Output: [[1,0,1],  
+         [0,0,0],  
+         [1,0,1]]
+```
+
+----
+
+### 🚀 Question 38: Game of Life  
+
+#### 📝 Problem Statement:  
+The **Game of Life** is a **cellular automaton** devised by **John Horton Conway** in 1970.  
+
+✔ Given an `m × n` grid `board` with cells marked as **live** (`1`) or **dead** (`0`).  
+✔ Each cell interacts with **8 neighboring cells** (horizontal, vertical, diagonal).  
+✔ The **next state** of the board is determined **simultaneously** based on:  
+
+**🔹 Rules:**  
+1️⃣ Any **live cell** (`1`) with **fewer than 2 live neighbors** dies (**under-population**).  
+2️⃣ Any **live cell** (`1`) with **2 or 3 live neighbors** survives.  
+3️⃣ Any **live cell** (`1`) with **more than 3 live neighbors** dies (**over-population**).  
+4️⃣ Any **dead cell** (`0`) with **exactly 3 live neighbors** becomes a **live cell** (`1`).  
+
+🔹 **The board must be updated in-place** following these rules.  
+
+#### ✅ Example:
+![alt text](image-6.png)
+```java
+Input: board = [[0,1,0],  
+                [0,0,1],  
+                [1,1,1],  
+                [0,0,0]]  
+Output: [[0,0,0],  
+         [1,0,1],  
+         [0,1,1],  
+         [0,1,0]]
+```
+#### **📌 Directions Mapping**
+Each `{dx, dy}` pair represents movement in a **grid**:
+
+| Move | Direction | dx | dy |
+|------|----------|----|----|
+| 🔼 **Up** | Move one row up | `-1` | `0` |
+| ➡️ **Right** | Move one column right | `0` | `1` |
+| 🔽 **Down** | Move one row down | `1` | `0` |
+| ⬅️ **Left** | Move one column left | `0` | `-1` |
+| ↖️ **Top-left diagonal** | Move up-left | `-1` | `-1` |
+| ↙️ **Bottom-left diagonal** | Move down-left | `1` | `-1` |
+| ↗️ **Top-right diagonal** | Move up-right | `-1` | `1` |
+| ↘️ **Bottom-right diagonal** | Move down-right | `1` | `1` |
+
+---
+
+#### **🛠 Code Example**
+```java
+int[][] directions = {
+    {-1, 0}, {0, 1}, {1, 0}, {0, -1}, 
+    {-1, -1}, {1, -1}, {-1, 1}, {1, 1}
+};
+
+System.out.println("Possible movements in a 2D grid:");
+for (int i = 0; i < directions.length; i++) {
+    System.out.println("dx = " + directions[i][0] + ", dy = " + directions[i][1]);
+}
+```
+
+----
+
+### 🚀 Question 39: Ransom Note  
+
+#### 📝 Problem Statement:  
+Given two strings **`ransomNote`** and **`magazine`**, return **true** if `ransomNote` can be **constructed** using the letters from `magazine`, or **false** otherwise.  
+
+✔ **Each letter in `magazine` can only be used once** in `ransomNote`.  
+
+#### ✅ Example:
+```java
+Input: ransomNote = "a", magazine = "b"  
+Output: false
+```
+
+----
+
+### 🚀 Question 40: Isomorphic Strings  
+
+#### 📝 Problem Statement:  
+Given two strings `s` and `t`, determine if they are **isomorphic**.  
+
+✔ **Definition:**  
+Two strings are **isomorphic** if the characters in `s` can be **replaced** to form `t`, following these rules:  
+- Each occurrence of a character **must** be replaced **consistently** with another character.  
+- **No two characters** in `s` may map to the **same** character in `t`.  
+- A character **may** map to itself.  
+
+#### ✅ Example:
+```java
+Input: s = "egg", t = "add"  
+Output: true
+```
+
+----
+
+### 🚀 Question 41: Word Pattern  
+
+#### 📝 Problem Statement:  
+Given a string `pattern` and another string `s`, determine if `s` **follows** the same pattern.  
+
+✔ **A full match requires a bijection** between characters in `pattern` and words in `s`, meaning:  
+- Each **letter** in `pattern` maps to **exactly one unique word** in `s`.  
+- Each **word** in `s` maps to **exactly one letter** in `pattern`.  
+- No **two letters** can map to the **same word**, and no **two words** can map to the **same letter**.  
+
+---
+
+#### ✅ Example:
+```java
+Input: pattern = "abba", s = "dog cat cat dog"  
+Output: true
+```
+
+----
+
+### 🚀 Question 42: Valid Anagram  
+
+#### 📝 Problem Statement:  
+Given two strings `s` and `t`, return **true** if `t` is an **anagram** of `s`, otherwise return **false**.  
+
+✔ **Definition:**  
+An **anagram** is formed by **rearranging** all the characters of one string to exactly match another string.  
+✔ Both strings must contain the **same characters** with **equal frequency**.  
+
+---
+
+#### ✅ Example:
+```java
+Input: s = "anagram", t = "nagaram"  
+Output: true
+```
+
+----
+
+### 🚀 Question 43: Group Anagrams  
+
+#### 📝 Problem Statement:  
+Given an array of strings `strs`, group the **anagrams** together.  
+✔ You can return the answer **in any order**.  
+
+🔹 **Definition:**  
+An **anagram** is a word or phrase formed by **rearranging** the letters of another word.  
+✔ All strings in a group **must be anagrams** of each other.  
+
+#### ✅ Example:
+```java
+Input: strs = ["eat","tea","tan","ate","nat","bat"]  
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+```
+
+----
+
+### 🚀 Question 44: Two Sum  
+
+#### 📝 Problem Statement:  
+Given an **array of integers** `nums` and an **integer** `target`, return **indices** of the two numbers that add up to `target`.  
+
+✔ Each input has **exactly one solution**.  
+✔ **Cannot use the same element twice**.  
+✔ **Return indices in any order**.  
+
+#### ✅ Example:
+```java
+Input: nums = [2,7,11,15], target = 9  
+Output: [0,1]
+```
+
+----
+
+### 🚀 Question 45: Happy Number  
+
+#### 📝 Problem Statement:  
+A **happy number** is defined by this process:  
+1️⃣ Start with a **positive integer** `n`.  
+2️⃣ Replace `n` with the **sum of the squares** of its digits.  
+3️⃣ Repeat until `n` **becomes `1`** (which makes it happy), or it **enters a cycle** that does **not include `1`**.  
+4️⃣ Return `true` if `n` is **happy**, otherwise return `false`.  
+
+#### ✅ Example:
+```java
+Input: n = 19  
+Output: true  
+```
+
+----
+
+### 🚀 Question 46: Contains Duplicate II  
+
+#### 📝 Problem Statement:  
+Given an **integer array** `nums` and an **integer** `k`, return **true** if there exist **two distinct indices** `i` and `j` such that:  
+
+✔ `nums[i] == nums[j]` (**Same number at different indices**).  
+✔ `|i - j| ≤ k` (**Their indices are at most `k` positions apart**).  
+
+#### ✅ Example:
+```java
+Input: nums = [1,2,3,1], k = 3  
+Output: true
+```
+
+----
+
+### 🚀 Question 47: Longest Consecutive Sequence  
+
+#### 📝 Problem Statement:  
+Given an **unsorted array** `nums` of integers, return the **length** of the **longest consecutive elements sequence**.  
+
+✔ The solution **must run in `O(n)` time**.  
+
+#### ✅ Example:
+```java
+Input: nums = [100,4,200,1,3,2]  
+Output: 4
+```
+
+----
